@@ -1,4 +1,3 @@
-
 var images = [
     { "src": "img1.jpg", "alt": "Nature" },
     { "src": "img2.jpg", "alt": "Fjords" }, 
@@ -26,10 +25,11 @@ document.getElementById("inainte").addEventListener("click", function(){
     if(x == images.length-1){
         x = 0;
     }
-   showImage(x++);
+   showImage(++x);
 });
-
 document.getElementById("inapoi").addEventListener("click", function(){
-
-    showImage(x--);
+if(x == images.length -1){
+    x = 0;
+}
+    showImage(--x);
 });
